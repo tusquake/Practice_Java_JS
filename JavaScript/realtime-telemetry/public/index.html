@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Telemetry Dashboard</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:20px}
+    .box{padding:8px;border-radius:6px;background:#f3f3f3;margin-bottom:8px}
+  </style>
+</head>
+<body>
+  <h1>Realtime Telemetry</h1>
+  <div class="box" id="status">Status: <em>disconnected</em></div>
+  <div class="box">
+    <strong>Latest</strong>
+    <pre id="latest">—</pre>
+  </div>
+
+  <div class="box">
+    <label>Update Frequency (ms):
+      <input id="freq" type="number" value="1000" min="100" />
+      <button id="setFreq">Set</button>
+    </label>
+    <button id="snapshot">Request Snapshot</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
