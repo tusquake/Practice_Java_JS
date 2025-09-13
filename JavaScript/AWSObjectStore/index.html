@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Store Manager</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 400;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2.2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.15),
+                0 0 0 1px rgba(255,255,255,0.05),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(102, 126, 234, 0.3) 50%, transparent 100%);
+        }
+
+        .upload-section {
+            text-align: center;
+            position: relative;
+        }
+
+        .upload-section h2 {
+            color: #1a202c;
+            margin-bottom: 30px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .upload-area {
+            border: 3px dashed #cbd5e0;
+            border-radius: 20px;
+            padding: 50px 30px;
+            margin-bottom: 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            background: rgba(247, 250, 252, 0.5);
+        }
+
+        .upload-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(102, 126, 234, 0.1) 50%, transparent 100%);
+            transition: left 0.6s ease;
+        }
+
+        .upload-area:hover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .upload-area:hover::before {
+            left: 100%;
+        }
+
+        .upload-area.drag-over {
+            border-color: #4c51bf;
+            background: rgba(102, 126, 234, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.3);
+        }
+
+        .upload-icon {
+            font-size: 3.5rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .upload-area:hover .upload-icon {
+            transform: scale(1.1);
+            color: #4c51bf;
+        }
+
+        .upload-text {
+            color: #4a5568;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #1a202c;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+            transition: left 0.6s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            box-shadow: 0 8px 16px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-danger:hover {
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+            box-shadow: 0 8px 16px rgba(113, 128, 150, 0.3);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 15px 30px rgba(113, 128, 150, 0.4);
+        }
+
+        .objects-section h2 {
+            color: #1a202c;
+            margin-bottom: 30px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .objects-list {
+            max-height: 650px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .objects-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .objects-list::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 3px;
+        }
+
+        .objects-list::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+        }
+
+        .object-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .object-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .object-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #cbd5e0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .object-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .object-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .object-key {
+            font-weight: 700;
+            color: #1a202c;
+            font-size: 1.2rem;
+            max-width: 60%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .object-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .object-actions .btn {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .object-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .meta-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+        }
+
+        .status-message {
+            padding: 18px 24px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .status-success {
+            background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%);
+            color: #22543d;
+            border: 1px solid #68d391;
+            box-shadow: 0 4px 8px rgba(104, 211, 145, 0.2);
+        }
+
+        .status-error {
+            background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+            color: #742a2a;
+            border: 1px solid #fc8181;
+            box-shadow: 0 4px 8px rgba(252, 129, 129, 0.2);
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 40px;
+            color: #a0aec0;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+            opacity: 0.6;
+        }
+
+        .empty-state p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .card {
+                padding: 25px;
+                border-radius: 20px;
+            }
+
+            .object-meta {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .object-actions {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .object-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+            }
+
+            .object-key {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .object-actions {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Object Store Manager</h1>
+            <p>Upload, manage, and download your files with ease</p>
+        </div>
+
+        <div class="main-content">
+            <div class="card upload-section">
+                <h2><i data-lucide="upload-cloud"></i> Upload Object</h2>
+                
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">
+                        <i data-lucide="cloud-upload"></i>
+                    </div>
+                    <div class="upload-text">
+                        <strong>Click to select file</strong> or drag and drop
+                    </div>
+                    <input type="file" class="file-input" id="fileInput">
+                </div>
+
+                <div class="form-group">
+                    <label for="objectKey">Object Key</label>
+                    <input type="text" id="objectKey" placeholder="Enter unique key for your object">
+                </div>
+
+                <div class="form-group">
+                    <label for="customMetadata">Custom Metadata (JSON)</label>
+                    <input type="text" id="customMetadata" placeholder='{"author": "John Doe", "project": "demo"}'>
+                </div>
+
+                <button class="btn" id="uploadBtn" disabled>
+                    <i data-lucide="upload"></i>
+                    Upload Object
+                </button>
+            </div>
+
+            <div class="card objects-section">
+                <h2>
+                    <i data-lucide="files"></i>
+                    Stored Objects
+                    <button class="btn btn-secondary" id="refreshBtn" style="margin-left: auto; font-size: 0.9rem; padding: 8px 16px;">
+                        <i data-lucide="refresh-cw"></i>
+                        Refresh
+                    </button>
+                </h2>
+
+                <div id="statusMessage"></div>
+
+                <div class="objects-list" id="objectsList">
+                    <div class="empty-state">
+                        <i data-lucide="folder-x"></i>
+                        <p>No objects found. Upload your first file to get started!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class ObjectStoreUI {
+            constructor() {
+                this.apiBase = 'http://localhost:3000';
+                this.selectedFile = null;
+                this.init();
+            }
+
+            static safeInitIcons() {
+                if (typeof lucide !== "undefined" && lucide.createIcons) {
+                    lucide.createIcons();
+                }
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.loadObjects();
+                ObjectStoreUI.safeInitIcons();
+            }
+
+            setupEventListeners() {
+                const uploadArea = document.getElementById('uploadArea');
+                const fileInput = document.getElementById('fileInput');
+                const uploadBtn = document.getElementById('uploadBtn');
+                const refreshBtn = document.getElementById('refreshBtn');
+                const objectKey = document.getElementById('objectKey');
+
+                uploadArea.addEventListener('click', () => fileInput.click());
+                uploadArea.addEventListener('dragover', this.handleDragOver.bind(this));
+                uploadArea.addEventListener('dragleave', this.handleDragLeave.bind(this));
+                uploadArea.addEventListener('drop', this.handleDrop.bind(this));
+
+                fileInput.addEventListener('change', this.handleFileSelect.bind(this));
+                uploadBtn.addEventListener('click', this.uploadFile.bind(this));
+                refreshBtn.addEventListener('click', this.loadObjects.bind(this));
+
+                fileInput.addEventListener('change', () => {
+                    if (this.selectedFile && !objectKey.value) {
+                        objectKey.value = this.selectedFile.name;
+                    }
+                });
+
+                const checkUploadReady = () => {
+                    uploadBtn.disabled = !this.selectedFile || !objectKey.value.trim();
+                };
+                fileInput.addEventListener('change', checkUploadReady);
+                objectKey.addEventListener('input', checkUploadReady);
+            }
+
+            handleDragOver(e) {
+                e.preventDefault();
+                document.getElementById('uploadArea').classList.add('drag-over');
+            }
+            handleDragLeave(e) {
+                e.preventDefault();
+                document.getElementById('uploadArea').classList.remove('drag-over');
+            }
+            handleDrop(e) {
+                e.preventDefault();
+                document.getElementById('uploadArea').classList.remove('drag-over');
+                const files = e.dataTransfer.files;
+                if (files.length > 0) this.selectFile(files[0]);
+            }
+            handleFileSelect(e) {
+                const file = e.target.files[0];
+                if (file) this.selectFile(file);
+            }
+
+            selectFile(file) {
+                this.selectedFile = file;
+                const uploadArea = document.getElementById('uploadArea');
+                uploadArea.innerHTML = `
+                    <div class="upload-icon">
+                        <i data-lucide="file"></i>
+                    </div>
+                    <div class="upload-text">
+                        <strong>${file.name}</strong><br>
+                        <small>${this.formatFileSize(file.size)}</small>
+                    </div>
+                `;
+                ObjectStoreUI.safeInitIcons();
+                const objectKey = document.getElementById('objectKey');
+                if (!objectKey.value) objectKey.value = file.name;
+            }
+
+            async uploadFile() {
+                if (!this.selectedFile) return;
+
+                const uploadBtn = document.getElementById('uploadBtn');
+                const objectKey = document.getElementById('objectKey').value.trim();
+                const customMetadata = document.getElementById('customMetadata').value.trim();
+
+                if (!objectKey) {
+                    this.showMessage('Please provide an object key', 'error');
+                    return;
+                }
+
+                uploadBtn.disabled = true;
+                uploadBtn.innerHTML = '<div class="loading-spinner"></div> Uploading...';
+
+                try {
+                    const formData = new FormData();
+                    formData.append('file', this.selectedFile);
+
+                    if (customMetadata) {
+                        try {
+                            JSON.parse(customMetadata);
+                            formData.append('metadata', customMetadata);
+                        } catch {
+                            this.showMessage('Invalid JSON in custom metadata', 'error');
+                            return;
+                        }
+                    }
+
+                    const response = await fetch(`${this.apiBase}/objects/${encodeURIComponent(objectKey)}`, {
+                        method: 'PUT',
+                        body: formData
+                    });
+                    const result = await response.json();
+
+                    if (result.success) {
+                        this.showMessage(`Object "${objectKey}" uploaded successfully!`, 'success');
+                        this.resetUploadForm();
+                        this.loadObjects();
+                    } else {
+                        this.showMessage(`Upload failed: ${result.error}`, 'error');
+                    }
+                } catch (error) {
+                    this.showMessage(`Upload error: ${error.message}`, 'error');
+                } finally {
+                    uploadBtn.disabled = false;
+                    uploadBtn.innerHTML = '<i data-lucide="upload"></i> Upload Object';
+                    ObjectStoreUI.safeInitIcons();
+                }
+            }
+
+            resetUploadForm() {
+                this.selectedFile = null;
+                document.getElementById('fileInput').value = '';
+                document.getElementById('objectKey').value = '';
+                document.getElementById('customMetadata').value = '';
+                document.getElementById('uploadArea').innerHTML = `
+                    <div class="upload-icon">
+                        <i data-lucide="cloud-upload"></i>
+                    </div>
+                    <div class="upload-text">
+                        <strong>Click to select file</strong> or drag and drop
+                    </div>
+                `;
+                ObjectStoreUI.safeInitIcons();
+            }
+
+            async loadObjects() {
+                const objectsList = document.getElementById('objectsList');
+                const refreshBtn = document.getElementById('refreshBtn');
+
+                refreshBtn.disabled = true;
+                refreshBtn.innerHTML = '<div class="loading-spinner"></div> Loading...';
+
+                try {
+                    const response = await fetch(`${this.apiBase}/objects`);
+                    const result = await response.json();
+
+                    if (result.success) {
+                        this.renderObjects(result.objects);
+                    } else {
+                        this.showMessage(`Failed to load objects: ${result.error}`, 'error');
+                    }
+                } catch (error) {
+                    this.showMessage(`Error loading objects: ${error.message}`, 'error');
+                    objectsList.innerHTML = `
+                        <div class="empty-state">
+                            <i data-lucide="alert-circle"></i>
+                            <p>Failed to load objects. Please check if the server is running.</p>
+                        </div>
+                    `;
+                    ObjectStoreUI.safeInitIcons();
+                } finally {
+                    refreshBtn.disabled = false;
+                    refreshBtn.innerHTML = '<i data-lucide="refresh-cw"></i> Refresh';
+                    ObjectStoreUI.safeInitIcons();
+                }
+            }
+
+            renderObjects(objects) {
+                const objectsList = document.getElementById('objectsList');
+                if (!objects || objects.length === 0) {
+                    objectsList.innerHTML = `
+                        <div class="empty-state">
+                            <i data-lucide="folder-x"></i>
+                            <p>No objects found. Upload your first file to get started!</p>
+                        </div>
+                    `;
+                    ObjectStoreUI.safeInitIcons();
+                    return;
+                }
+
+                objectsList.innerHTML = objects.map(obj => `
+                    <div class="object-item">
+                        <div class="object-header">
+                            <div class="object-key">${this.escapeHtml(obj.key)}</div>
+                            <div class="object-actions">
+                                <button class="btn" onclick="objectStoreUI.downloadObject('${this.escapeHtml(obj.key)}')">
+                                    <i data-lucide="download"></i>
+                                </button>
+                                <button class="btn btn-secondary" onclick="objectStoreUI.viewMetadata('${this.escapeHtml(obj.key)}')">
+                                    <i data-lucide="info"></i>
+                                </button>
+                                <button class="btn btn-danger" onclick="objectStoreUI.deleteObject('${this.escapeHtml(obj.key)}')">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="object-meta">
+                            <div class="meta-item"><i data-lucide="file-text"></i> ${obj.contentType}</div>
+                            <div class="meta-item"><i data-lucide="hard-drive"></i> ${this.formatFileSize(obj.size)}</div>
+                            <div class="meta-item"><i data-lucide="calendar"></i> ${this.formatDate(obj.uploadTime)}</div>
+                        </div>
+                    </div>
+                `).join('');
+                ObjectStoreUI.safeInitIcons();
+            }
+
+            async downloadObject(key) {
+                try {
+                    const response = await fetch(`${this.apiBase}/objects/${encodeURIComponent(key)}`);
+                    if (!response.ok) throw new Error('Download failed');
+
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = key;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+
+                    this.showMessage(`Downloaded "${key}" successfully!`, 'success');
+                } catch (error) {
+                    this.showMessage(`Download failed: ${error.message}`, 'error');
+                }
+            }
+
+            async viewMetadata(key) {
+                try {
+                    const response = await fetch(`${this.apiBase}/objects/${encodeURIComponent(key)}/metadata`);
+                    const result = await response.json();
+                    if (result.success) {
+                        const metadata = result.metadata;
+                        alert(`Metadata for "${key}":\n\n` +
+                              `Size: ${this.formatFileSize(metadata.size)}\n` +
+                              `Content Type: ${metadata.contentType}\n` +
+                              `Upload Time: ${this.formatDate(metadata.uploadTime)}\n` +
+                              `Hash: ${metadata.hash}\n` +
+                              `Custom Metadata: ${JSON.stringify(metadata.customMetadata, null, 2)}`);
+                    } else {
+                        this.showMessage(`Failed to get metadata: ${result.error}`, 'error');
+                    }
+                } catch (error) {
+                    this.showMessage(`Error getting metadata: ${error.message}`, 'error');
+                }
+            }
+
+            async deleteObject(key) {
+                if (!confirm(`Are you sure you want to delete "${key}"?`)) return;
+
+                try {
+                    const response = await fetch(`${this.apiBase}/objects/${encodeURIComponent(key)}`, { method: 'DELETE' });
+                    const result = await response.json();
+                    if (result.success) {
+                        this.showMessage(`Deleted "${key}" successfully!`, 'success');
+                        this.loadObjects();
+                    } else {
+                        this.showMessage(`Delete failed: ${result.error}`, 'error');
+                    }
+                } catch (error) {
+                    this.showMessage(`Delete error: ${error.message}`, 'error');
+                }
+            }
+
+            showMessage(message, type) {
+                const statusMessage = document.getElementById('statusMessage');
+                statusMessage.innerHTML = `<div class="status-message status-${type}">${message}</div>`;
+                setTimeout(() => { statusMessage.innerHTML = ''; }, 5000);
+            }
+
+            formatFileSize(bytes) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024, sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+            formatDate(dateString) {
+                return new Date(dateString).toLocaleString();
+            }
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        }
+
+        const objectStoreUI = new ObjectStoreUI();
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+import React, { useState, useEffect } from "react";
+import Dashboard from "@cw/cherrywork-analytics/Dashboard";
+import { BTPToken, destinationData } from "../Utility/destinationConfig";
+import testConfig from "../Utility/testconfig";
+
+const NewIWMDashboard = () => {
+    const userEmail = getComputedStyle(document.documentElement).getPropertyValue("--loggedInUserMail").trim() || "P000301";
+    // const userName = getComputedStyle(document.documentElement).getPropertyValue("--loggedInUserName").trim() || "Default User";
+
+    const activityLabel = "Dashboard";
+    const processId = "";
+    const useWorkAccess = true;
+
+    return (
+        <Dashboard
+            BTPToken={BTPToken}
+            destinationData={destinationData}
+            useWorkAccess={useWorkAccess}
+            chartConfigs={testConfig}
+            activityLabel={activityLabel}
+            userId={userEmail}
+            processId={processId}
+            runtimeValues={{
+              userId: userEmail,
+            }}/>
+    );
+};
+
+export default NewIWMDashboard;

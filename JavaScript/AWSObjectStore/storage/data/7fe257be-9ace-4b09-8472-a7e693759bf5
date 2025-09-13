@@ -1,0 +1,882 @@
+[
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "de7166e8-c460-4442-b8cb-488bccaa0a52"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "de7166e8-c460-4442-b8cb-488bccaa0a52"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "de7166e8-c460-4442-b8cb-488bccaa0a52"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "de7166e8-c460-4442-b8cb-488bccaa0a52"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "de7166e8-c460-4442-b8cb-488bccaa0a52"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "0715524a-c9be-4722-840a-57ef911d28af"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "0715524a-c9be-4722-840a-57ef911d28af"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "0715524a-c9be-4722-840a-57ef911d28af"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "0715524a-c9be-4722-840a-57ef911d28af"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "0715524a-c9be-4722-840a-57ef911d28af"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "c023faef-08de-4cbb-8f8e-d560c8c7a029"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "c023faef-08de-4cbb-8f8e-d560c8c7a029"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "c023faef-08de-4cbb-8f8e-d560c8c7a029"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "c023faef-08de-4cbb-8f8e-d560c8c7a029"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "c023faef-08de-4cbb-8f8e-d560c8c7a029"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "0eec99cb-eed0-4e89-963f-041f0edbcba1"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "0eec99cb-eed0-4e89-963f-041f0edbcba1"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "0eec99cb-eed0-4e89-963f-041f0edbcba1"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "0eec99cb-eed0-4e89-963f-041f0edbcba1"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "0eec99cb-eed0-4e89-963f-041f0edbcba1"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "0",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "2840d045-d75a-4c57-9870-f7eadd10a7c4"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "2840d045-d75a-4c57-9870-f7eadd10a7c4"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "2840d045-d75a-4c57-9870-f7eadd10a7c4"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "2840d045-d75a-4c57-9870-f7eadd10a7c4"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "0",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "2840d045-d75a-4c57-9870-f7eadd10a7c4"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "5",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "adcfc2c7-f689-44c5-a10c-6695b6c243a7"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "5",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "adcfc2c7-f689-44c5-a10c-6695b6c243a7"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "5",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "adcfc2c7-f689-44c5-a10c-6695b6c243a7"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "5",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "adcfc2c7-f689-44c5-a10c-6695b6c243a7"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "5",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "adcfc2c7-f689-44c5-a10c-6695b6c243a7"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "e5c40a8c-d484-42bc-ad8d-3ff97a408b4e"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "e5c40a8c-d484-42bc-ad8d-3ff97a408b4e"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "e5c40a8c-d484-42bc-ad8d-3ff97a408b4e"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "e5c40a8c-d484-42bc-ad8d-3ff97a408b4e"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "e5c40a8c-d484-42bc-ad8d-3ff97a408b4e"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "7fc5a645-1b40-4b08-8ca7-acbdbaa533cb"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "7fc5a645-1b40-4b08-8ca7-acbdbaa533cb"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "7fc5a645-1b40-4b08-8ca7-acbdbaa533cb"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "7fc5a645-1b40-4b08-8ca7-acbdbaa533cb"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "7fc5a645-1b40-4b08-8ca7-acbdbaa533cb"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "fdf6ac64-fa70-4687-a330-8a3df784cde2"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "fdf6ac64-fa70-4687-a330-8a3df784cde2"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "fdf6ac64-fa70-4687-a330-8a3df784cde2"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "fdf6ac64-fa70-4687-a330-8a3df784cde2"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "fdf6ac64-fa70-4687-a330-8a3df784cde2"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "93a9fe55-7037-46cf-83e3-e152aa8bf7d2"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "93a9fe55-7037-46cf-83e3-e152aa8bf7d2"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "93a9fe55-7037-46cf-83e3-e152aa8bf7d2"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "93a9fe55-7037-46cf-83e3-e152aa8bf7d2"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "93a9fe55-7037-46cf-83e3-e152aa8bf7d2"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "d360592d-7e0e-468f-8acf-b52c915fda11"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "d360592d-7e0e-468f-8acf-b52c915fda11"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "d360592d-7e0e-468f-8acf-b52c915fda11"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "d360592d-7e0e-468f-8acf-b52c915fda11"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "d360592d-7e0e-468f-8acf-b52c915fda11"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "8e473f81-3df4-4bdf-9dd9-afddf00698e0"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "8e473f81-3df4-4bdf-9dd9-afddf00698e0"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "8e473f81-3df4-4bdf-9dd9-afddf00698e0"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "8e473f81-3df4-4bdf-9dd9-afddf00698e0"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": null,
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "8e473f81-3df4-4bdf-9dd9-afddf00698e0"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "00af6026-9da7-4186-a84b-d71707002758"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "00af6026-9da7-4186-a84b-d71707002758"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "00af6026-9da7-4186-a84b-d71707002758"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "00af6026-9da7-4186-a84b-d71707002758"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "00af6026-9da7-4186-a84b-d71707002758"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "6516755b-4605-491e-8f09-8a4094691d3e"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "6516755b-4605-491e-8f09-8a4094691d3e"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "6516755b-4605-491e-8f09-8a4094691d3e"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "6516755b-4605-491e-8f09-8a4094691d3e"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "6516755b-4605-491e-8f09-8a4094691d3e"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "97994d45-9567-43b1-95cd-3ae35e4a1451"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "97994d45-9567-43b1-95cd-3ae35e4a1451"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "97994d45-9567-43b1-95cd-3ae35e4a1451"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "4",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "97994d45-9567-43b1-95cd-3ae35e4a1451"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "97994d45-9567-43b1-95cd-3ae35e4a1451"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "26cd60a7-c674-40a0-8d51-1aef5a341c42"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "26cd60a7-c674-40a0-8d51-1aef5a341c42"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "26cd60a7-c674-40a0-8d51-1aef5a341c42"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "26cd60a7-c674-40a0-8d51-1aef5a341c42"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "26cd60a7-c674-40a0-8d51-1aef5a341c42"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "9a926a2f-8d0f-423a-b60a-98f273f2278d"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "9a926a2f-8d0f-423a-b60a-98f273f2278d"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "9a926a2f-8d0f-423a-b60a-98f273f2278d"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "9a926a2f-8d0f-423a-b60a-98f273f2278d"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "9a926a2f-8d0f-423a-b60a-98f273f2278d"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "207c2d76-ed5f-408f-9fa4-9f07e2115fb6"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "207c2d76-ed5f-408f-9fa4-9f07e2115fb6"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "0",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "207c2d76-ed5f-408f-9fa4-9f07e2115fb6"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "207c2d76-ed5f-408f-9fa4-9f07e2115fb6"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "207c2d76-ed5f-408f-9fa4-9f07e2115fb6"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "8ea4288f-538b-44d9-b8be-a189b6af6cf3"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "8ea4288f-538b-44d9-b8be-a189b6af6cf3"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "8ea4288f-538b-44d9-b8be-a189b6af6cf3"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "3",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "8ea4288f-538b-44d9-b8be-a189b6af6cf3"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "8ea4288f-538b-44d9-b8be-a189b6af6cf3"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "d4017348-81f2-4856-a043-7defc7bf517d"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "d4017348-81f2-4856-a043-7defc7bf517d"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "d4017348-81f2-4856-a043-7defc7bf517d"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "d4017348-81f2-4856-a043-7defc7bf517d"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "0",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "d4017348-81f2-4856-a043-7defc7bf517d"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "525a2cfc-e6a8-42e6-baa5-52142108c76d"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "525a2cfc-e6a8-42e6-baa5-52142108c76d"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "525a2cfc-e6a8-42e6-baa5-52142108c76d"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "525a2cfc-e6a8-42e6-baa5-52142108c76d"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "2",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "525a2cfc-e6a8-42e6-baa5-52142108c76d"
+  },
+  {
+    "propertyName": "What is the potential impact of the failure mode on user or personnel safety?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3530E0E4-40AF-4E40-BDB9-BB358BE7AB6D",
+    "formInstanceID": "baaf6a17-e8b7-4638-9518-d09e2d3b2d07"
+  },
+  {
+    "propertyName": "How much does the failure mode degrade the equipment’s intended performance?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button3EFFFF79-FCF9-4180-9238-7CE48CC4FB16",
+    "formInstanceID": "baaf6a17-e8b7-4638-9518-d09e2d3b2d07"
+  },
+  {
+    "propertyName": "How widespread is the effect of the failure (single component vs. system-wide)?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button4153EFF2-5E12-4E9E-9AB5-70F08D91A253",
+    "formInstanceID": "baaf6a17-e8b7-4638-9518-d09e2d3b2d07"
+  },
+  {
+    "propertyName": "How difficult or costly is it to recover from this failure (repair or replacement)?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_button05FD8EDA-7777-4054-846B-AE12C2B6BB35",
+    "formInstanceID": "baaf6a17-e8b7-4638-9518-d09e2d3b2d07"
+  },
+  {
+    "propertyName": "What is the environmental or regulatory impact of the failure?",
+    "status": "SUBMIT",
+    "propertyValue": "1",
+    "dataType": "RadioButtons",
+    "fieldID": "radio_buttonA41E35C8-C1CE-47FB-B46B-3DE59719FAF2",
+    "formInstanceID": "baaf6a17-e8b7-4638-9518-d09e2d3b2d07"
+  }
+]
