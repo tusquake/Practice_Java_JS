@@ -2,6 +2,9 @@
 
 A lightweight file storage system built with Node.js that mimics cloud object storage services like Amazon S3.
 
+<img width="1366" height="610" alt="image" src="https://github.com/user-attachments/assets/a0c05fa6-cc6e-487e-ac5a-d40df6ccbb68" />
+
+
 ## What is an Object Store?
 
 An **Object Store** is a data storage system that manages data as objects rather than files in folders. Each object contains:
